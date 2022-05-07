@@ -1,5 +1,12 @@
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+
 export class Boleto {
+  @ApiProperty()
   barCode: string;
+
+  @ApiProperty()
   amount: string;
-  expirationDate: string;
+
+  @ApiPropertyOptional()
+  expirationDate?: string;
 }

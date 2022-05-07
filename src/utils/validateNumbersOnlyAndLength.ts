@@ -1,17 +1,18 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
+import { ErrorMessages } from 'src/shared/enums/errorMessages';
 
-export const validateNumbersOnlyAndLength = (request: string): void => {
+export const validateNumbersOnlyAndLength = (digitableLine: string): void => {
   const onlyNumbers = /^[0-9]*$/;
-  if (!onlyNumbers.test(request)) {
+  if (!onlyNumbers.test(digitableLine)) {
     throw new HttpException(
-      'Given digitable line must be numeric.',
+      ErrorMessages.NOT_NUMERIC_ERROR_MESSAGE,
       HttpStatus.BAD_REQUEST,
     );
   }
 
-  if (request.length !== 47 && request.length !== 48) {
+  if (digitableLine.length !== 47 && digitableLine.length !== 48) {
     throw new HttpException(
-      'Given digitable line must have correct length.',
+      ErrorMessages.INCORRECT_LENGTH_MESSAGE,
       HttpStatus.BAD_REQUEST,
     );
   }

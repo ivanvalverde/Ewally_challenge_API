@@ -2,6 +2,12 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
+import {
+  mockConventionDocumentDigitableLine,
+  mockServiceConventionDocumentResponse,
+  mockServiceTitleDocumentResponse,
+  mockTitleDocumentDigitableLine,
+} from './../src/shared/mocks/mocks';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
@@ -15,10 +21,17 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('should return information about a title document, /boletos/:digitableLine (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get(`/boletos/${mockTitleDocumentDigitableLine}`)
       .expect(200)
-      .expect('Hello World!');
+      .expect(mockServiceTitleDocumentResponse);
+  });
+
+  it('should return information about a convention document, /boletos/:digitableLine (GET)', () => {
+    return request(app.getHttpServer())
+      .get(`/boletos/${mockConventionDocumentDigitableLine}`)
+      .expect(200)
+      .expect(mockServiceConventionDocumentResponse);
   });
 });

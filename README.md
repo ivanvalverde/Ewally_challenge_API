@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+API designed to read a sequence of numbers(digitable line) to validate and bring data associated to that invoice. Proposed challenge by Ewally as a job oportunity.
 
 ## Installation
 
@@ -58,16 +58,11 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Contact
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Author - [Ivan Valverde](https://www.linkedin.com/in/ivan-valverde-95a63a24/)
+- Email - ivanvalverde53@hotmail.com

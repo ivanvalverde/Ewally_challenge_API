@@ -88,3 +88,9 @@ export const mockWrongConventionboletoInfoObj: BoletoInfo = {
   thirdVerificationDigit: '9',
   fourthVerificationDigit: '8',
 };
+
+export const mockWrongTitleDocumentDigitableLine =
+  '21212311933300012109044756174023458700000020005';
+
+export const mockWrongConventionDocumentDigitableLine =
+  '817700000004010936599702411310797039001433708318';

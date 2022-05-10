@@ -24,7 +24,15 @@
 
 ## Description
 
-API designed to read a sequence of numbers(digitable line) to validate and bring data associated to that invoice. Proposed challenge by Ewally as a job oportunity.
+API designed to read a sequence of numbers(digitable line) to validate and decrypt data associated to that invoice. Proposed challenge by Ewally as a job oportunity.
+
+## API Info
+
+Routes:
+- *localhost:8080/boletos/:digitableLine* - GET route to validate and decrypt associated data from given URL parameter.
+  
+Swagger:
+- *localhost:8080/api* - Swagger available route.
 
 ## Installation
 
@@ -57,10 +65,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Contact
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
